@@ -20,8 +20,3 @@ This repo is dedicated to learning and understanding the core concepts of Django
 - ⚙️ Admin Panel Customization
 - 📦 Static and Media Files
 - 🔄 REST APIs (Intro with Django REST Framework)
-
----
-
-## 📁 Folder Structure
-
