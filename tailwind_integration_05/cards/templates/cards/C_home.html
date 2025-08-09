@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Home page
+{% endblock  %}
+
+{% block content %}
+    <h1>This is Home page</h1>
+    <hr>
+    <p>Home page is loaded</p>
+    <hr>
+    <a href="{% url 'about' %}">
+      <button>
+        move to about page
+      </button>
+    </a>
+  
+{% endblock  %}

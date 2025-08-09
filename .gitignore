@@ -63,3 +63,29 @@ ehthumbs.db
 # Others
 *.swp
 *.swo
+
+# Node.js
+node_modules/
+package-lock.json
+package.json
+
+# Tailwind and PostCSS build files (adjust path if needed)
+theme/static_src/
+theme/static/css/
+
+# Optional: Tailwind config files (if you don’t want to track them)
+tailwind.config.js
+postcss.config.js
+
+# VS Code and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Python & Django
+*.pyc
+__pycache__/
+*.log
+db.sqlite3
+.env
+.venv/
