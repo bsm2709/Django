@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-class characters(models.Model):
+class Characters(models.Model):
     sex_choice = [
         ('M', 'Male'),
         ('F','Female'),

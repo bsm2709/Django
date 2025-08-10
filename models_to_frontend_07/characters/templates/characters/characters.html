@@ -1,10 +1,29 @@
 {% extends "layout.html" %}
 
-
 {% block title %}
- Character page  
-{% endblock  %}
+  Character page
+{% endblock %}
 
 {% block content %}
-  <h1>Hi u are at Character page</h1>
-{% endblock  %}
+  <h1 style="color: blueviolet; font-size: 28px; margin-bottom: 20px;">
+    Hi u are at Character page
+  </h1>
+
+  {% for ch in characters %}
+    <div style="background-color: #a2ffe0; padding: 15px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <img src="{{ ch.image.url }}" alt="image" height="60" width="60" style="border-radius: 50%; margin-right: 15px;">
+        <h1 style="margin: 0; color: purple;">{{ ch.name }}</h1>
+      </div>
+      <div>
+        <h2 style="margin-bottom: 5px; font-size: 18px; color: #333;">Details:</h2>
+        <p style="margin: 0; color: #555;">location : {{ ch.location }}</p>
+      </div>
+      <a href="">
+        <button style="background-color: purple; color: aquamarine;">
+          Details : 
+        </button>
+      </a>
+    </div>
+  {% endfor %}
+{% endblock %}
