@@ -45,9 +45,6 @@ class Characters(models.Model):
     bloodgroup = models.CharField(default = '' ,choices= bg )
     createdtime = models.DateTimeField(default=timezone.now)
 
-
-
-
     def __str__(self):
         return self.name
     
