@@ -9,5 +9,5 @@ def characters(request):
 
 
 def characterdetails(request, char_id):
-    character = get_object_or_404(Characters, pk = char_id)
-    return render()
+    char = get_object_or_404(Characters, pk = char_id)
+    return render(request, "characters/chardetails.html", {'char' : char})

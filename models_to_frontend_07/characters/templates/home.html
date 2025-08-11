@@ -1,15 +1,27 @@
 {% extends "layout.html" %}
 
-
 {% block title %}
- Home page  
-{% endblock  %}
+Home page
+{% endblock %}
 
 {% block content %}
-  <h1>Hi u are at home page</h1>
-  <a href="{% url 'characters' %}">
-    <button>
-      All Characters
-    </button>
-  </a>
-{% endblock  %}
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; 
+            background: linear-gradient(135deg, #3498DB, #2ECC71); color: white; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px;">
+
+    <h1 style="font-size: 40px; margin-bottom: 10px; font-weight: 700;">
+        👋 Welcome to the Character Portal
+    </h1>
+    <p style="font-size: 18px; margin-bottom: 40px; max-width: 500px; line-height: 1.5;">
+        Explore a collection of unique characters, view their details, and learn more about them in style.
+    </p>
+
+    <a href="{% url 'characters' %}" 
+       style="text-decoration: none; background-color: white; color: #2C3E50; padding: 14px 28px; border-radius: 8px; 
+              font-size: 18px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
+       onmouseover="this.style.backgroundColor='#F1F1F1'; this.style.transform='scale(1.05)';"
+       onmouseout="this.style.backgroundColor='white'; this.style.transform='scale(1)';">
+        View All Characters →
+    </a>
+
+</div>
+{% endblock %}

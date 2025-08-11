@@ -1,29 +1,45 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  Character page
+Character page
 {% endblock %}
 
 {% block content %}
-  <h1 style="color: blueviolet; font-size: 28px; margin-bottom: 20px;">
-    Hi u are at Character page
-  </h1>
+<h1 style="color: #2C3E50; font-size: 30px; margin-bottom: 35px; text-align: center; font-family: 'Segoe UI', sans-serif; font-weight: 600;">
+    Hi, you are at Character page
+</h1>
 
-  {% for ch in characters %}
-    <div style="background-color: #a2ffe0; padding: 15px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <img src="{{ ch.image.url }}" alt="image" height="60" width="60" style="border-radius: 50%; margin-right: 15px;">
-        <h1 style="margin: 0; color: purple;">{{ ch.name }}</h1>
-      </div>
-      <div>
-        <h2 style="margin-bottom: 5px; font-size: 18px; color: #333;">Details:</h2>
-        <p style="margin: 0; color: #555;">location : {{ ch.location }}</p>
-      </div>
-      <a href="">
-        <button style="background-color: purple; color: aquamarine;">
-          Details : 
-        </button>
-      </a>
+{% for ch in characters %}
+<div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;"
+     onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.12)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)';">
+
+    <!-- Left side: image + name + location -->
+    <div style="display: flex; align-items: center;">
+        <img src="{{ ch.image.url }}" alt="{{ ch.name }}" height="70" width="70" 
+             style="border-radius: 50%; margin-right: 15px; border: 3px solid #3498DB;">
+        <div>
+            <h2 style="margin: 0; color: #2C3E50; font-size: 20px; font-weight: 600; font-family: 'Segoe UI', sans-serif;">
+                {{ ch.name }}
+            </h2>
+            <p style="margin: 4px 0 0; color: #7F8C8D; font-size: 14px; font-family: 'Segoe UI', sans-serif;">
+                📍 Location: {{ ch.location }}
+            </p>
+        </div>
     </div>
-  {% endfor %}
+
+    <!-- Right side: button -->
+    <a href="{% url 'char_details' ch.id %}" 
+       style="background-color: #3498DB; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; 
+              font-size: 14px; font-weight: 500; font-family: 'Segoe UI', sans-serif; 
+              box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: background-color 0.2s ease;"
+       onmouseover="this.style.backgroundColor='#2C80B4';"
+       onmouseout="this.style.backgroundColor='#3498DB';">
+        View Details
+    </a>
+
+</div>
+{% endfor %}
 {% endblock %}
