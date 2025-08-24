@@ -5,8 +5,14 @@
 {% endblock  %}
 
 {% block content %}
-    <h1>This is h1 page</h1>
+
     <hr>
-    <button style="height: 250px; width: 200px;"><a href="{% url 'home' %}">Book Store</a></button>
+    <div style="text-align: center;">
+        <h1>Welcome to our Book Store.</h1>
+        <h3>Get inside our store by clicking below button.</h3>
+        <p>It's just super thing about django's Form :(Built by forms)</p>
+        <button style="height: 250px; width: 200px; "><a href="{% url 'home' %}">Book Store</a></button>
+    </div>
+    
     <hr>
 {% endblock  %}
