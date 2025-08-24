@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def intial(request):
-    return render(request, 'H1.html')
+def h1(request):
+    return render(request, 'h1.html',)

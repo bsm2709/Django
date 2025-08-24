@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Home page
+{% endblock  %}
+
+{% block content %}
+    <h1>This is h1 page</h1>
+    <hr>
+    <button style="height: 250px; width: 200px;"><a href="{% url 'home' %}">Book Store</a></button>
+    <hr>
+{% endblock  %}

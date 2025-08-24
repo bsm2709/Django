@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Home page
+{% endblock  %}
+
+{% block content %}
+    <h1>This is Book Store</h1>
+    <p>You can add your book in our store</p>
+    <hr>
+    <button ><a href="{% url 'form' %}">Add Book</a></button>
+    <hr>
+
+    {% for book in books %}
+      <h1>BOOK {{book.id}} -- {{book.bookname}}</h1>
+      <h2>Auther - {{book.author}}</h2>
+      <p>Category - {{book.category}},  Published yr - {{book.Published_yr}} </p>
+      <p>About - {{book.About_book}}</p>
+
+      <hr>
+    {% endfor %}
+{% endblock  %}
