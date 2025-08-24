@@ -29,7 +29,6 @@ class Characters(models.Model):
         ('B-', 'B negative'),
         ('AB+', 'AB positive'),
         ('AB-', 'AB negative'),
-        
     ]
     
     name = models.CharField(max_length=30)
